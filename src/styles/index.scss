@@ -4,57 +4,51 @@ body {
 
 .header {
   display: flex;
+  box-sizing: border-box;
+
   flex-direction: row;
+  background-color: #fff;
+  width: 100%;
   align-items: center;
   justify-content: space-between;
-
-  box-sizing: border-box;
-  width: 100%;
   padding-inline: 50px;
-
-  background-color: #fff;
   box-shadow: 0 2px 4px #0000000d;
 }
 
 .logo-img {
-  left: 50px;
   display: flex;
   width: 40px;
   height: 40px;
+  left: 50px;
 }
 
 .nav__list {
   display: inline-flex;
-  align-items: center;
   justify-content: center;
-
+  align-items: center;
   margin: 0;
   padding: 0;
-
-  text-decoration: none;
-  text-transform: uppercase;
   list-style: none;
+  text-transform: uppercase;
+  text-decoration: none;
 }
 
 .nav__link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  box-sizing: border-box;
-  height: 60px;
-
-  font-family: Roboto, sans-serif;
-  font-size: 12px;
-  font-weight: 500;
-  line-height: 100%;
   color: #060b35;
+  transition: color 300ms;
+  display: flex;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  font-size: 12px;
+  height: 60px;
+  line-height: 100%;
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 0;
-  list-style-type: none;
-
-  transition: color 300ms;
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
 
   &.is-active {
     position: relative;
@@ -68,18 +62,14 @@ body {
 
 .is-active::after {
   content: '';
-
   position: absolute;
   bottom: 0;
   left: 0;
-
-  overflow: hidden;
-
-  width: 100%;
   height: 4px;
-  border-radius: 8px;
-
+  width: 100%;
   background: #00acdc;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 .nav__item {
@@ -91,13 +81,12 @@ body {
 }
 
 .catalog {
-  overflow: visible;
   display: grid;
   grid-template-columns: 1fr;
   gap: 48px 46px;
-  justify-content: center;
-
   padding: 50px 40px;
+  overflow: visible;
+  justify-content: center;
 
   @media (min-width: 488px) {
     grid-template-columns: repeat(2, 200px);
@@ -115,68 +104,57 @@ body {
 .card {
   box-sizing: border-box;
   width: 200px;
-  padding: 32px 16px 16px;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
-
+  background: #fff;
+  padding: 32px 16px 16px;
+  transition: transform 300ms;
   color: #060b35;
 
-  background: #fff;
-
-  transition: transform 300ms;
-
   &__img {
-    display: flex;
     width: 160px;
     height: 134px;
+    display: flex;
     margin-inline: auto;
   }
 
   &__title {
     margin: 40px 0 0;
-
     font-family: Roboto, sans-serif;
-    font-size: 12px;
     font-weight: 500;
+    font-size: 12px;
     line-height: 18px;
-    color: #34568b;
     letter-spacing: 0%;
-
+    color: #34568b;
     transition: color 300ms;
   }
 
   &__code {
-    margin: 4px 0 0;
-
-    font-family: Roboto, sans-serif;
-    font-size: 10px;
-    font-weight: 400;
-    line-height: 14px;
-    color: #616070;
-    letter-spacing: 0%;
-
     background-color: #fff;
+    margin: 4px 0 0;
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    letter-spacing: 0%;
+    color: #616070;
   }
 
   &__button {
-    display: block;
-
     width: 100%;
     height: 40px;
+    display: block;
     margin-top: 16px;
-    border: 1px solid #00acdc;
-    border-radius: 5px;
-
     font-family: Roboto, sans-serif;
-    font-size: 14px;
     font-weight: 700;
+    font-size: 14px;
     line-height: 16px;
-    color: #fff;
-    text-transform: uppercase;
     letter-spacing: 0%;
-
+    text-transform: uppercase;
+    color: #fff;
+    border-radius: 5px;
     background-color: #00acdc;
-
+    border: 1px solid #00acdc;
     transition: all 300ms;
   }
 
@@ -187,28 +165,28 @@ body {
   }
 
   &:hover {
-    z-index: 1;
     transform: scale(1.2);
+    z-index: 1;
     color: #34568b;
   }
 }
 
 .grade {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
+  align-items: center;
   margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
 }
 
 .stars {
   display: flex;
   &__star {
+    margin-top: 6px;
     width: 16px;
     height: 16px;
-    margin-top: 6px;
-    margin-right: 4px;
-
     background: url('../images/star.svg') no-repeat center;
+    margin-right: 4px;
   }
   &__star:last-child {
     margin-right: 0;
@@ -220,50 +198,45 @@ body {
 
 .reviews {
   display: flex;
-  justify-content: right;
-
   font-family: Roboto, sans-serif;
-  font-size: 10px;
   font-weight: 400;
+  font-size: 10px;
   line-height: 14px;
-  color: #060b35;
-  text-align: right;
   letter-spacing: 0%;
   vertical-align: bottom;
+  color: #060b35;
+  text-align: right;
+  justify-content: right;
 }
 
 .price {
-  display: flex;
-  justify-content: space-between;
   margin-top: 24px;
+  justify-content: space-between;
+  display: flex;
 }
 
 .price-title {
   display: flex;
-
-  margin: 0;
-
   font-family: Roboto, sans-serif;
-  font-size: 12px;
   font-weight: 400;
+  font-size: 12px;
   line-height: 18px;
-  color: #616070;
-  text-align: left;
   letter-spacing: 0%;
+  text-align: left;
   vertical-align: bottom;
+  color: #616070;
+  margin: 0;
 }
 
 .price-amount {
   display: flex;
-
-  margin: 0;
-
   font-family: Roboto, sans-serif;
-  font-size: 16px;
   font-weight: 700;
+  font-size: 16px;
   line-height: 18px;
-  color: #060b35;
-  text-align: right;
   letter-spacing: 0%;
+  text-align: right;
   vertical-align: bottom;
+  color: #060b35;
+  margin: 0;
 }
